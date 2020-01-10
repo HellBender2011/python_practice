@@ -1,0 +1,21 @@
+In this kata you will have to write a function that takes litres and pricePerLiter as arguments. Purchases of 2 or more litres get a discount of 5 cents per litre, purchases of 4 or more litres get a discount of 10 cents per litre, and so on every two litres, up to a maximum discount of 25 cents per litre. But total discount per liter cannot be more than 25 cents. round answer to 2 decimal places. Also you can guess that there will not be negative or non-numeric inputs.
+
+def fuel_price(litres, price_per_liter):
+    a = round(litres/2)
+    b = min(a*5,25)
+    c = (price_per_liter-(b/100))*litres
+    return round(c,2)
+    
+    
+There's a "3 for 2" (or "2+1" if you like) offer on mangoes. For a given quantity and price (per mango), calculate the total cost of the mangoes.
+Examples
+mango(3, 3) ==> 6    # 2 mangoes for 3 = 6; +1 mango for free
+mango(9, 5) ==> 30   # 6 mangoes for 5 = 30; +3 mangoes for free
+
+def mango(quantity, price):
+    a = quantity%3
+    b = quantity - a
+    c = 2*b/3
+    d = c*price + a*price
+    return d
+    
