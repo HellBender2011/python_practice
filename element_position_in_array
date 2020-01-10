@@ -1,0 +1,7 @@
+When provided with a letter, return its position in the alphabet.
+Input :: "a"
+Ouput :: "Position of alphabet: 1"
+
+def position(alphabet):
+    from string import ascii_lowercase
+    return "Position of alphabet: " + str(ascii_lowercase.index(str(alphabet)) + 1)
