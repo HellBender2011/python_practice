@@ -1,0 +1,9 @@
+Complete the function that takes two integers (a, b, where a < b) and return an array of all integers between the input parameters, including them.
+
+def between(a,b):
+    c = []
+    d = min(a,b)
+    e = max(a,b)
+    for i in range(d,e):
+        c.append(i)
+    return c
